@@ -1,1 +1,168 @@
-@use "./reset";
+@use "./reset" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
+
+body {
+  font-family: $ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  background-color: $clr-charcoal-grey;
+  color: $clr-dark-slate-grey;
+  font-size: $fs-400;
+  box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+/************************************************
+ * =Form screen
+ ************************************************/
+
+.form__wrapper {
+  background-color: $clr-white;
+  max-width: 23.4375rem;
+  margin-inline: auto;
+}
+
+.form__container {
+  padding: 2.5rem 1.5rem;
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: $fs-800;
+}
+
+.form__description {
+  margin-top: 1.5rem;
+}
+
+// Features list styles
+.features {
+  margin-top: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.features__item {
+  display: flex;
+  gap: 1rem;
+
+  &::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background: url("../assets/images/icon-list.svg") no-repeat;
+  }
+}
+
+// Form styles
+.form-group {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  position: relative;
+}
+
+.form-group__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__label,
+.form__error {
+  font-weight: 700;
+  font-size: $fs-200;
+}
+
+.form__input {
+  margin-top: 0.5rem;
+  padding: 1rem 1.5rem;
+  line-height: 1;
+  border: 1px solid $clr-grey;
+  border-radius: 0.5rem;
+}
+
+.form__error {
+  color: $clr-vermillion;
+}
+
+.button {
+  margin-top: 1.5rem;
+  padding: 0.875rem 2.875rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-color: transparent;
+  background-color: $clr-dark-slate-grey;
+  color: $clr-white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient($clr-vermillion, $clr-pink);
+    border-color: transparent;
+    box-shadow: 0 1rem 2rem rgb($clr-vermillion, 0.5);
+  }
+}
+
+.button {
+}
+
+/************************************************
+ * =Success screen
+ ************************************************/
+.success {
+  padding-top: 9.3125rem;
+  padding-bottom: 2.5rem;
+  background-color: $clr-white;
+  max-width: 23.4375rem;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+.success__icon {
+  align-self: start;
+}
+
+.success__title {
+  margin-top: 2.5rem;
+  line-height: 1;
+}
+
+.success__description {
+  margin-top: 1.5rem;
+}
+
+.success__button {
+  margin-top: auto;
+}
+
+/************************************************
+ * =Responsive
+ ************************************************/
+
+/************************************************
+ * =Utility
+ ************************************************/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

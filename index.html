@@ -9,12 +9,66 @@
       name="description"
       content="A newsletter sign-up form in HTML CSS with a custom form validation written in JavaScript"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./scss/main.scss" />
     <script defer src="./scripts/main.js"></script>
   </head>
   <body>
     <main>
-      <h1>Newsletter Sign-up</h1>
+      <div class="form__wrapper" hidden>
+        <form action="" class="form">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
+          <div class="form__container">
+            <h1 class="form__title">Stay updated!</h1>
+            <p class="form__description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="features">
+              <li class="features__item">
+                Product discovery and building what matters
+              </li>
+              <li class="features__item">
+                Measuring to ensure updates are a success
+              </li>
+              <li class="features__item">And much more!</li>
+            </ul>
+            <div class="form-group">
+              <div class="form-group__wrapper">
+                <label for="email" class="form__label">Email address</label>
+                <p class="form__error" hidden>
+                  Please provide a valid email address
+                </p>
+              </div>
+              <input
+                type="email"
+                name="email"
+                class="form__input"
+                placeholder="email@company.com"
+                required
+              />
+            </div>
+            <button class="button">Subscribe to monthly newsletter</button>
+          </div>
+        </form>
+      </div>
+      <div class="success">
+        <img
+          class="success__icon"
+          src="./assets/images/icon-success.svg"
+          alt=""
+        />
+        <h1 class="success__title">Thanks for subscribing!</h1>
+        <p class="success__description">
+          You have successfully subscribed to our email listing. Check your
+          email for the discount code.
+        </p>
+        <button class="button success__button">Dismiss message</button>
+      </div>
     </main>
   </body>
 </html>
