@@ -61,9 +61,13 @@ Users should be able to:
 
 ### What I learned
 
+Firefox adds a lower opacity to the placeholder.
+
 ### Continued development
 
 ### Useful resources
+
+[W3C ARIA19 - Using ARIA role=alert or Live Regions to identify Errors](https://www.w3.org/TR/WCAG20-TECHS/ARIA19.html)
 
 ## Author
 

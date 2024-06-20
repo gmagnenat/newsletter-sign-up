@@ -4,41 +4,91 @@
 
 body {
   font-family: $ff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100svh;
   background-color: $clr-charcoal-grey;
   color: $clr-dark-slate-grey;
   font-size: $fs-400;
-  box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /************************************************
- * =Form screen
+ * =Signup screen
  ************************************************/
-
-.form__wrapper {
+.form-screen {
   background-color: $clr-white;
-  max-width: 23.4375rem;
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  // max-width: 23.4375rem;
+  width: 100%;
+  box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+.form__image {
+  img {
+    width: 100%;
+  }
 }
 
 .form__container {
-  padding: 2.5rem 1.5rem;
-}
-
-.form__title {
-  font-weight: 700;
-  font-size: $fs-800;
+  padding: 1.5rem;
 }
 
 .form__description {
   margin-top: 1.5rem;
 }
 
-// Features list styles
+.form__infos {
+  display: flex;
+  justify-content: space-between;
+  font-size: $fs-200;
+  font-weight: 600;
+}
+
+.errors {
+  color: $clr-vermillion;
+}
+
+// class error is added to the form input when the input isn't valid
+.error {
+  background-color: rgb($clr-vermillion, 0.15);
+  &::placeholder {
+    opacity: 1;
+    color: $clr-vermillion;
+  }
+}
+
+.form__input {
+  margin-top: 0.2rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  outline: transparent;
+  border: 1px solid $clr-grey;
+}
+
+.form__button {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: $clr-dark-slate-grey;
+  color: $clr-white;
+  font-weight: 700;
+  border: transparent;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(90deg, $clr-pink, $clr-vermillion);
+    box-shadow: 0 0.5rem 1rem (rgb($clr-vermillion, 0.2));
+  }
+}
+
 .features {
   margin-top: 1.5rem;
   list-style-type: none;
@@ -50,102 +100,39 @@ body {
 
 .features__item {
   display: flex;
-  gap: 1rem;
+  line-height: 1.5;
 
   &::before {
     content: "";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("../assets/images/icon-list.svg") no-repeat;
     width: 2rem;
     height: 2rem;
-    background: url("../assets/images/icon-list.svg") no-repeat;
   }
 }
 
-// Form styles
 .form-group {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  position: relative;
-}
-
-.form-group__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.form__label,
-.form__error {
-  font-weight: 700;
-  font-size: $fs-200;
-}
-
-.form__input {
-  margin-top: 0.5rem;
-  padding: 1rem 1.5rem;
-  line-height: 1;
-  border: 1px solid $clr-grey;
-  border-radius: 0.5rem;
-}
-
-.form__error {
-  color: $clr-vermillion;
-}
-
-.button {
   margin-top: 1.5rem;
-  padding: 0.875rem 2.875rem;
-  width: 100%;
-  border-radius: 0.5rem;
-  border-color: transparent;
-  background-color: $clr-dark-slate-grey;
-  color: $clr-white;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background: linear-gradient($clr-vermillion, $clr-pink);
-    border-color: transparent;
-    box-shadow: 0 1rem 2rem rgb($clr-vermillion, 0.5);
-  }
-}
-
-.button {
 }
 
 /************************************************
  * =Success screen
  ************************************************/
-.success {
-  padding-top: 9.3125rem;
-  padding-bottom: 2.5rem;
-  background-color: $clr-white;
-  max-width: 23.4375rem;
-  padding-inline: 1.5rem;
-  margin-inline: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#success-screen {
   min-height: 100svh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $clr-white;
+  width: 100%;
 }
 
-.success__icon {
-  align-self: start;
-}
-
-.success__title {
-  margin-top: 2.5rem;
-  line-height: 1;
-}
-
-.success__description {
-  margin-top: 1.5rem;
-}
-
-.success__button {
-  margin-top: auto;
+.success__card {
+  text-align: center;
 }
 
 /************************************************
