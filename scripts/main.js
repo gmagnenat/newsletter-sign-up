@@ -52,6 +52,7 @@ function showSuccessScreen() {
 function showFormScreen() {
   // add overflow visible on body
   document.body.style.overflow = "visible";
+  form.reset();
   successScreen.close();
 }
 
@@ -65,7 +66,6 @@ function processFormData(e) {
     loading.innerHTML = "Loading...";
     displayEmail.innerHTML = userEmail;
     showSuccessScreen();
-    // successHeading.focus();
     loading.innerHTML = "";
   }
 }
@@ -79,12 +79,4 @@ successBtn.addEventListener("click", function () {
 
   // close modal
   successScreen.close();
-});
-
-// Close success screen when escape key is pressed
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    successScreen.close();
-    showFormScreen();
-  }
 });

@@ -22,11 +22,11 @@
     <main id="main">
       <div id="form-screen" class="form-screen">
         <div class="form__image">
-          <picture class="form__image">
-            <!-- <source
+          <picture class="">
+            <source
               srcset="./assets/images/illustration-sign-up-desktop.svg"
               media="(min-width: 48em)"
-            /> -->
+            />
             <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
           </picture>
         </div>
@@ -70,38 +70,26 @@
         </div>
       </div>
       <div id="loading-message" aria-live="assertive" class="sr-only"></div>
-      <dialog id="success-screen" class="success-screen">
+      <dialog id="success-screen" class="success-screen" focus>
         <img
           class="success__icon"
           src="./assets/images/icon-success.svg"
           alt=""
         />
-        <h1 class="success__title">Thanks !</h1>
-        <p class="success__description">
+        <h1 class="success__title">Thanks for subscribing!</h1>
+        <p id="confirmation-message" class="success__description">
           A confirmation email has been sent to
           <span id="display-email" class="display-email"></span> Please open it
           and click the button inside to confirm your subscription
         </p>
-        <button id="success-btn" class="button success__button">
+        <button
+          id="success-btn"
+          class="button success__button"
+          aria-describedby="confirmation-message"
+        >
           Dismiss message
         </button>
       </dialog>
-      <!-- <div id="success-screen">
-        <div class="success__card">
-          <img src="./assets/images/icon-success.svg" alt="" />
-          <h1 id="success-heading" tabindex="-1">Thanks !</h1>
-          <p>
-            A confirmation email has been sent to
-            <span id="display-email" class="email-adress"></span>
-
-            Please open it and click the button inside to confirm your
-            subscription
-          </p>
-          <button id="success-btn" class="button success__button">
-            Dismiss message
-          </button>
-        </div>
-      </div> -->
     </main>
   </body>
 </html>
