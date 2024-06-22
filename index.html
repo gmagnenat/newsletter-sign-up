@@ -48,30 +48,60 @@
             <div class="form-group">
               <div class="form__infos">
                 <label for="email">Email address</label>
-                <span id="errors" class="errors" aria-live="assertive"></span>
+                <span
+                  id="emailError"
+                  class="errors"
+                  aria-live="assertive"
+                ></span>
               </div>
               <input
                 type="email"
+                autocomplete="off"
                 id="email"
                 name="email"
                 class="form__input"
-                aria-describedby="errors"
+                aria-describedby="emailError"
                 placeholder="email@company.com"
-                required
+                aria-required="true"
               />
             </div>
-            <button class="form__button">
-              Subscribe to monthly newsletter
-            </button>
+            <button class="button">Subscribe to monthly newsletter</button>
           </form>
         </div>
       </div>
-      <div id="success-screen" hidden aria-live="assertive">
+      <div id="loading-message" aria-live="assertive" class="sr-only"></div>
+      <dialog id="success-screen" class="success-screen">
+        <img
+          class="success__icon"
+          src="./assets/images/icon-success.svg"
+          alt=""
+        />
+        <h1 class="success__title">Thanks !</h1>
+        <p class="success__description">
+          A confirmation email has been sent to
+          <span id="display-email" class="display-email"></span> Please open it
+          and click the button inside to confirm your subscription
+        </p>
+        <button id="success-btn" class="button success__button">
+          Dismiss message
+        </button>
+      </dialog>
+      <!-- <div id="success-screen">
         <div class="success__card">
-          <h1>Thanks !</h1>
-          <p id="display-email"></p>
+          <img src="./assets/images/icon-success.svg" alt="" />
+          <h1 id="success-heading" tabindex="-1">Thanks !</h1>
+          <p>
+            A confirmation email has been sent to
+            <span id="display-email" class="email-adress"></span>
+
+            Please open it and click the button inside to confirm your
+            subscription
+          </p>
+          <button id="success-btn" class="button success__button">
+            Dismiss message
+          </button>
         </div>
-      </div>
+      </div> -->
     </main>
   </body>
 </html>

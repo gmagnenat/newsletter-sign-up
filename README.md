@@ -55,9 +55,6 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
 
@@ -68,6 +65,9 @@ Firefox adds a lower opacity to the placeholder.
 ### Useful resources
 
 [W3C ARIA19 - Using ARIA role=alert or Live Regions to identify Errors](https://www.w3.org/TR/WCAG20-TECHS/ARIA19.html)
+[Accessible form validation](https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/)
+[Accessible notifications with ARIA Live Regions (Part 1)](https://www.sarasoueidan.com/blog/accessible-notifications-with-aria-live-regions-part-1/)
+[Using aria-live](https://bitsofco.de/using-aria-live/)
 
 ## Author
 
