@@ -47,6 +47,9 @@ Users should be able to:
 1. **project setup with [Vite](https://vitejs.dev/)**. Created the folder structure. Removed the non essentials files.
    Added scss and the starter files for variables, mixins, reset.
 2. Open the figma file and inspect the design. Plan what to start with. Setup the style-guide colors and variables.
+3. Start by the HTML and planning the two screens
+4. Mobile version CSS
+5. JavaScript for the form validation
 
 ### Built with
 
@@ -58,9 +61,14 @@ Users should be able to:
 
 ### What I learned
 
-Firefox adds a lower opacity to the placeholder.
+Firefox adds a lower opacity to the input placeholder-
+
+TODO: complete with what I learned on aria and form validation
+TODO: add information on the dialog implementation
 
 ### Continued development
+
+TODO
 
 ### Useful resources
 
